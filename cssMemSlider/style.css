@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  height: 100%;
+}
+
+body {
+  background-color: grey;
+  height: inherit;
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  height: inherit;
+}
+
+.mem-slider {
+  width: 100%;
+  height: 70vh;
+  margin-top: 10vh;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.mem-slider > input {
+  display: none;
+}
+
+.mem-slider__slides {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slides {
+  width: inherit;
+  height: inherit;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* opacity: 0; */
+  /* position: relative; */
+  /* top: 0; */
+  /* z-index: 0; */
+  display: none;
+
+}
+
+.slide1 {
+  background-image: url("./src/img/1.jpg");
+}
+
+.slide2 {
+  background-image: url("./src/img/2.jpg");
+}
+
+.slide3 {
+  background-image: url("./src/img/3.jpeg");
+}
+
+.slide4 {
+  background-image: url("./src/img/4.jpg");
+}
+
+.text-and-controls {
+  margin-top: 3%;
+  margin-right: 2px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-and-controls__controls label {
+  width: 10px;
+  height: 10px;
+  margin-right: 18px;
+  cursor: pointer;
+  display: inline-block;
+  /* position: relative; */
+}
+
+.text-and-controls__controls label:last-child {
+  margin-right: 0;
+}
+
+.text-and-controls__controls label::after {
+  width: 14px;
+  height: 14px;
+  content: "";
+  display: block;
+  border: 1px solid red;
+  border-radius: 50%;
+  position: relative;
+  left: -2px;
+  top: -2px;
+}
+
+/* .text-and-controls__controls label:hover, */
+#radio1:checked ~ .text-and-controls > .text-and-controls__controls label:nth-child(1),
+#radio2:checked ~ .text-and-controls > .text-and-controls__controls label:nth-child(2),
+#radio3:checked ~ .text-and-controls > .text-and-controls__controls label:nth-child(3),
+#radio4:checked ~ .text-and-controls > .text-and-controls__controls label:nth-child(4) {
+	background-color: black;
+  border-radius: 50%;
+}
+
+#radio1:checked ~ .mem-slider__slides .slide1,
+#radio2:checked ~ .mem-slider__slides .slide2,
+#radio3:checked ~ .mem-slider__slides > .slide3,
+#radio4:checked ~ .mem-slider__slides > .slide4 {
+  /* opacity: 1;
+  z-index: 1; */
+  display: block;
+}
